@@ -65,19 +65,19 @@
 				<Activity size={20} style="display: inline; margin-right: 0.75rem;" />
 				Status Board
 			</a>
-			<a href="#" class="nav-item">
+			<a href="/labor" class="nav-item">
 				<Users size={20} style="display: inline; margin-right: 0.75rem;" />
 				Labor Management
 			</a>
-			<a href="#" class="nav-item">
+			<a href="/materials" class="nav-item">
 				<Package size={20} style="display: inline; margin-right: 0.75rem;" />
 				Materials & P&M
 			</a>
-			<a href="#" class="nav-item">
+			<a href="/daily-updates" class="nav-item">
 				<Calendar size={20} style="display: inline; margin-right: 0.75rem;" />
 				Daily Updates
 			</a>
-			<a href="#" class="nav-item">
+			<a href="/reports" class="nav-item">
 				<TrendingUp size={20} style="display: inline; margin-right: 0.75rem;" />
 				Reports
 			</a>
@@ -119,12 +119,12 @@
 			</div>
 			<div style="display: flex; gap: 1rem; align-items: end;">
 				<div class="form-group" style="margin-bottom: 0;">
-					<label class="form-label">Start Date</label>
-					<input type="date" class="form-input" bind:value={selectedDateRange.start} on:change={fetchData} />
+					<label class="form-label" for="start-date">Start Date</label>
+					<input id="start-date" type="date" class="form-input" bind:value={selectedDateRange.start} on:change={fetchData} />
 				</div>
 				<div class="form-group" style="margin-bottom: 0;">
-					<label class="form-label">End Date</label>
-					<input type="date" class="form-input" bind:value={selectedDateRange.end} on:change={fetchData} />
+					<label class="form-label" for="end-date">End Date</label>
+					<input id="end-date" type="date" class="form-input" bind:value={selectedDateRange.end} on:change={fetchData} />
 				</div>
 				<button class="btn btn-primary" on:click={fetchData}>Update</button>
 			</div>
